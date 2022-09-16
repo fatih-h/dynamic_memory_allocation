@@ -3,7 +3,8 @@
 #include <time.h>
 
 int main() {
-    
+    //Iki boyutlu dizi dinamik bellek yonetimi
+
     int **ikiBoyutluDizi;
     int satirSayisi,sutunSayisi;
     int i,j;
@@ -32,6 +33,10 @@ int main() {
             printf("%d ",ikiBoyutluDizi[i][j]);
         }
         printf("\n");
+    }
+
+    for(i=0; i < satirSayisi; i++){
+        free(ikiBoyutluDizi[i]);
     }
     free(ikiBoyutluDizi);
 
